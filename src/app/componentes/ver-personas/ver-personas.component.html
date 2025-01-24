@@ -1,0 +1,49 @@
+<div
+    class="table-responsive"
+>
+<br>
+<div class="buscar">
+    <form class="d-flex">
+        <input class="form-control me-2" type="search" (keyup)="updateField()" placeholder="Search" aria-label="Search">
+        <select formControlName = "Buscar" id="filtro">
+            
+            <label >Filtro</label>
+            <option value="" >Nombre </option>
+            <option value="" >apellido paterno</option>
+            <option value="" >apellido materno</option>
+            <option value="" >Telefono</option>
+          </select>
+    </form>
+</div>
+
+    <table
+        class="table table-striped table-hover table-borderless table-primary align-middle"
+    >
+        <thead class="table-light">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Edad</th>
+                <th>Telefono</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            @for (persona of personas; track $index) {
+            <tr
+                class="table"
+            >
+                <td scope="row">{{persona.nombre}}</td>
+                <td>{{persona.apellidopaterno}}</td>
+                <td>{{persona.edad}}</td>
+                <td>{{persona.telefono}}</td>
+                <td>
+                    <a [routerLink]="['/editar-persona', persona.id]" class="btn btn-outline-primary me-3">Editar</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+        <tfoot>
+            
+        </tfoot>
+    </table>
+</div>

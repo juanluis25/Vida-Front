@@ -1,0 +1,61 @@
+<div class="container">
+    <h2>Editar Persona</h2>
+    <form [formGroup]="personaForm" (ngSubmit)="actualizarPersona()">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" formControlName="nombre" class="form-control">
+      </div>
+  
+      <div class="form-group">
+        <label for="apellidopaterno">Apellido Paterno</label>
+        <input type="text" id="apellidopaterno" formControlName="apellidopaterno" class="form-control">
+      </div>
+  
+      <div class="formGroup">
+        <label for="apellidomaterno">Apellido Materno</label>
+        <input type="text" id="apellidomaterno" formControlName = "apellidomaterno" class="form-control">
+    </div>
+
+      <div class="form-group">
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" formControlName="edad" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="estadocivil">Estado Civil</label>
+        <input type="text" id="estadocivil" formControlName="estadocivil" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input type="text" id="telefono" formControlName="telefono" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="comosupistedeiglesia">Como Supiste</label>
+        <input type="text" id="comosupistedeiglesia" formControlName="comosupistedeiglesia" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="colonia">Colonia</label>
+        <input type="text" id="colonia" formControlName="colonia" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="nombrevoluntario">Nombre de Voluntario</label>
+        <input type="text" id="nombrevoluntario" formControlName="nombrevoluntario" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="condicionvisita">Condición de Visita</label>
+        <input type="text" id="condicionvisita" formControlName="condicionvisita" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="grupopequeñointeres">Grupo Pequeño de Intéres</label>
+        <input type="text" id="grupopequeñointeres" formControlName="grupopequeñointeres" class="form-control">
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="personaForm.invalid">Actualizar</button>
+    </form>
+  </div>

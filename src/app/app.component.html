@@ -1,0 +1,42 @@
+<nav
+    class="navbar navbar-expand-sm navbar-dark bg-primary"
+>
+    <div class="container">
+        <i class="bi bi-diagram-2"></i>
+        <a class="navbar-brand" href="#">Inicio</a>
+        <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="nav nav-underline">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ver-personas" routerLinkActive="accordion" href="#" style="color:white">
+                        Personas
+                        </a>
+                </li>
+                <ul class="nav nav-underline">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/persona" routerLinkActive="accordion" href="#" style="color:white">
+                        Nueva persona
+                    </a>
+                </li>
+                </ul>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/oracion-de-fe/id" routerLinkActive="accordion" href="#" style="color:white">
+                        Oración de Fe
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<router-outlet />

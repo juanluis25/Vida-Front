@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>Actualizar Oración de Fe</h2>
+
+    <form [formGroup]="oracionDeFeForm">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Edad</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                <!-- Iteramos sobre la lista de personas -->
+                <tr *ngFor="let persona of personas">
+                    <td>{{ persona.nombre }}</td>
+                    <td>{{ persona.apellidopaterno }}</td>
+                    <td>{{ persona.apellidomaterno }}</td>
+                    <td>{{ persona.edad }}</td>
+                    <td>
+                        <div class="form-check form-switch">
+                            <input 
+                                class="form-check-input" 
+                                type="checkbox" 
+                                [checked]="persona.oraciondefe" 
+                                (change)="actualizarOracionDeFe(persona)">
+                            <label class="form-check-label">Oración de Fe</label>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
